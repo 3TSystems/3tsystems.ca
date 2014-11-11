@@ -1,14 +1,15 @@
 <?php
-$mail_to = "info@3tsystems.ca";
-$mail_subject = "Website Query";
-
 $name = $_POST['name'];
 $email = $_POST['email'];
 $subject = $_POST['subject'];
 $message = $_POST['message'];
 
+$mail_to = "info@3tsystems.ca";
+$mail_subject = "Website Query - $name";
+
 // compose headers
 $headers = "From: 3T Systems <no-reply@3tsystems.ca>\r\n";
+$headers .= "Reply-to: $email\r\n";
 $headers .= "X-Mailer: PHP/".phpversion();
 
 $formcontent = "From:\r\n$name\r\n\r\n";
