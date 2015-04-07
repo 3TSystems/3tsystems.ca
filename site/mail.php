@@ -4,7 +4,7 @@ $email = $_POST['email'];
 $subject = $_POST['subject'];
 $message = $_POST['message'];
 
-$mail_to = "info@3tsystems.ca";
+$mail_to = "support@3tsystems.ca";
 $mail_subject = "$subject";
 
 // compose headers
