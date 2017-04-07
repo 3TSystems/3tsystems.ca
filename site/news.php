@@ -12,6 +12,10 @@ $formcontent = "E-mail:\r\n$email\r\n\r\n";
 // make sure each line doesn't exceed 70 characters
 $formcontent = wordwrap($formcontent, 70);
 
-mail($mail_to, $mail_subject, $formcontent, $headers);
+if($email != "")
+{
+  mail($mail_to, $mail_subject, $formcontent, $headers);
+}
+
 header('Location: thanks.html');
 ?>
